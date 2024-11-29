@@ -1,0 +1,184 @@
+/* Root Variables */
+
+
+:root {
+    --primary-color: rgb(255, 0, 111);
+    --hover-color: rgb(164, 13, 86);
+    --nav-bg: rgb(34, 34, 34);
+    --page-bg: rgb(21, 21, 21);
+    font-family: "Parkinsans", sans-serif;
+}
+
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--page-bg);
+    color: whitesmoke;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--nav-bg);
+    border-bottom: 2px solid var(--primary-color);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-name a {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.items-list {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+
+.items-list a {
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.items-list a:hover {
+    background-color: var(--primary-color);
+    color: black;
+}
+
+/* About Section */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.about-text {
+    flex: 1;
+    padding-right: 30px;
+    font-size: 1.1em;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+.about-image img {
+    width: 300px;
+    height: auto;
+    border: 3.5px solid var(--primary-color);
+    border-radius: 15px;
+}
+
+/* Projects Section */
+.projects-section, .skills-section {
+    padding: 50px;
+}
+
+.section-heading {
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.project-grid, .skills-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Remove Bullet Points from Lists in the Skills Section */
+.skills-grid ul {
+    list-style-type: none; /* Removes bullet points */
+    padding-left: 0; /* Removes the left padding */
+}
+
+.skills-grid li {
+    margin-bottom: 10px; /* Adds spacing between list items */
+}
+
+/* Remove Bullet Points from Navbar */
+.items-list {
+    display: flex;
+    gap: 20px;
+    list-style-type: none; /* Removes bullet points */
+    padding-left: 0; /* Removes the left padding */
+}
+
+.items-list li {
+    display: inline-block; /* Ensures list items are in a horizontal row */
+}
+
+.project-card, .skill-card {
+    padding: 25px;
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+    background-color: rgb(30, 30, 30);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover, .skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project-card h3, .skill-card h3 {
+    color: var(--primary-color);
+    font-size: 1.7em;
+    margin-bottom: 15px;
+}
+
+.project-card a {
+    color: var(--primary-color);
+    text-decoration:underline;
+}
+
+.project-card a:hover{
+    transition: color 0.5s ease;
+}
+
+/* Footer */
+.footer-section {
+    text-align: center;
+    padding: 40px 0;
+    background-color: var(--nav-bg);
+    border-top: 2px solid var(--primary-color);
+}
+
+.footer-section a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
